@@ -7,6 +7,7 @@ import Login from "../components/auth/Login";
 import Destination from "../components/Destination";
 import Services from "../services/Services";
 import Reviews from "../components/reviews/Reviews";
+import Gallery from "../components/gallery/Gallery";
 const Home = () => {
   const { setModal } = useContext(ModalContext);
   const [state] = useState({
@@ -39,6 +40,7 @@ const Home = () => {
       <Destination />
       <Services />
       <Reviews />
+      <Gallery />
     </>
   );
 };
