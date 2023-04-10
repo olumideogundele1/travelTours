@@ -7,7 +7,6 @@ const Reviews = () => {
   const {
     sharedData: { reviewsData },
   } = useContext(SharedContext);
-  console.log("Your Data:", reviewsData);
   return (
     <div className="reviews">
       <div className="container">
