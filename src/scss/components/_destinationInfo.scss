@@ -1,25 +1,26 @@
 @use "../abstracts/" as *;
 
-.destinationInfo{
-    margin: 8rem 0;
+.destinationInfo {
+  margin: 8rem 0;
 
-    &__p{
-        font-size: 1.5rem;
-        color: $silverDark;
+  &__p {
+    font-size: 1.5rem;
+    color: $silverDark;
+    line-height: 2.8rem;
+  }
+
+  &__details {
+    @include align(flex, space-between, center, null);
+    padding: 1.3rem 0;
+    border-bottom: 1px dotted $silverLight-500;
+
+    &__head {
+      font-size: 1.4rem;
+      color: $silverDark;
     }
-
-    &__details{
-        @include align(flex,space-between,center,null);
-        padding: 1.3rem 0;
-        border-bottom: 1px dotted $silverLight-500;
-
-        &__head{
-            font-size: 1.4rem;
-            color: $silverDark;
-        }
-        &__text{
-            font-size: 1.4rem;
-            color: $silverDark;
-        }
+    &__text {
+      font-size: 1.4rem;
+      color: $silverDark;
     }
+  }
 }
