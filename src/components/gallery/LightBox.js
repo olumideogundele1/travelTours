@@ -4,13 +4,20 @@ import GalleryContext from "../../context/GalleryContext";
 const LightBox = () => {
   const {
     galleryData: { currentLightBox },
+    dispatch,
   } = useContext(GalleryContext);
+  const closeLightBox = (e) => {
+    const eventClass = e.target.getAttribute("class");
+    if (eventClass === "gallery__lightbox") {
+      dispatch({ type: "CLOSE_LIGHTBOX" });
+    }
+  };
   return (
-    <div className="gallery__lightbox">
-      <h4>Nigeria</h4>
+    <div className="gallery__lightbox" onClick={closeLightBox}>
+      <h4>{currentLightBox.name}</h4>
       <div className="gallery__lightbox__card">
         <div className="gallery__lightbox__card__image">
-          <LazyLoadImage src="/assets/gallery/france.jpg" alt="image name" />
+          <LazyLoadImage src={currentLightBox.image} alt={currentLightBox.name} />
         </div>
       </div>
     </div>
