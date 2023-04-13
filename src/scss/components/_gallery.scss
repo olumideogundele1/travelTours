@@ -33,6 +33,17 @@
       background: transparent;
       border-radius: 0.3rem;
       overflow: hidden;
+      animation: cardAnimaation 0.5s linear;
+      @keyframes cardAnimaation {
+        from {
+          opacity: 0;
+          transform: translateY(-2rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       &__image {
         width: 45rem;
         max-height: 45rem;
@@ -41,6 +52,15 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          animation: imageAnimation 0.5s linear;
+          @keyframes imageAnimation {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
         }
       }
     }
