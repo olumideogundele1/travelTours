@@ -8,6 +8,7 @@ import Destination from "../components/Destination";
 import Services from "../services/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer";
 const Home = () => {
   const { setModal } = useContext(ModalContext);
   const [state] = useState({
@@ -41,6 +42,7 @@ const Home = () => {
       <Services />
       <Reviews />
       <Gallery />
+      <Footer />
     </>
   );
 };
