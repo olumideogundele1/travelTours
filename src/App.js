@@ -12,6 +12,7 @@ import Details from "./components/Details";
 import SharedProviders from "./context/providers/SharedProviders";
 import GalleryProvider from "./context/providers/GalleryProvider";
 import { HelmetProvider } from "react-helmet-async";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <HelmetProvider>
@@ -28,6 +29,7 @@ function App() {
                     <Route path="about" element={<About />} />
                     <Route path="details/:id" exact element={<Details />} />
                     <Route path="*" element={<NotFound />} />
+                    <Route path="contact" element={<Contact />} />
                   </Routes>
                 </SharedProviders>
               </DestinationsProvider>
