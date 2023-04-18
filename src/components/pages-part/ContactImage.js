@@ -13,7 +13,7 @@ const ContactImage = () => {
           id=""
           cols="12"
           rows="8"
-          className="group_textarea"
+          className="group__textarea"
           placeholder="write your message"
         ></textarea>
       </div>

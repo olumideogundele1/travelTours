@@ -1,49 +1,60 @@
-@mixin position($postion,$top,$left,$bottom,$right,$width,$height) {
-    position: $postion;
-    top: $top;
-    left: $left;
-    bottom: $bottom;
-    right: $right;
-    width: $width;
-    height: $height;
-    
+@mixin position($postion, $top, $left, $bottom, $right, $width, $height) {
+  position: $postion;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  width: $width;
+  height: $height;
 }
 
-@mixin align($flex,$justify-content,$align-items,$height){
-    display: $flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    height: $height;
+@mixin align($flex, $justify-content, $align-items, $height) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  height: $height;
 }
 
-@mixin animation($name, $duration, $timeFunction,$translate1,$translate2){
-    animation: $name $duration $timeFunction;
+@mixin animation($name, $duration, $timeFunction, $translate1, $translate2) {
+  animation: $name $duration $timeFunction;
 
-                    @keyframes #{$name} {
-                        0%{
-                            opacity: 0;
-                            transform: translateY($translate1);
-                        }100%{
-                            opacity: 1;
-                            transform: translateY($translate2);
-                        }
-                    }
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY($translate1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY($translate2);
+    }
+  }
 }
 
-@mixin toggleSpan($bg,$width,$height,$margin-top){
-    background: $bg;
-    display: block;
-    width: $width;
-    height: $height;
-    margin-top: $margin-top;
-    transition: all .5s linear;
+@mixin control($height, $paddingy, $paddingx, $color) {
+  display: block;
+  width: 100%;
+  border-radius: 0.4rem;
+  outline: none;
+  font-size: 1.6rem;
+  border: 1px solid $color;
+  height: $height;
+  padding: $paddingy $paddingx;
 }
 
-@mixin status($bg,$color){
-                padding:.6rem 1.3rem;
-                background: $bg;
-                color: $color;
-                border-radius: .5rem;
-                font-size: 1.3rem;
-                text-transform: capitalize;
+@mixin toggleSpan($bg, $width, $height, $margin-top) {
+  background: $bg;
+  display: block;
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  transition: all 0.5s linear;
+}
+
+@mixin status($bg, $color) {
+  padding: 0.6rem 1.3rem;
+  background: $bg;
+  color: $color;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
 }
