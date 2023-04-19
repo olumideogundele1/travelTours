@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PageContainer from "../components/pages-part/PageContainer";
 import AboutImage from "../components/pages-part/AboutImage";
 const About = () => {
