@@ -8,6 +8,7 @@ const ContactImage = () => {
   });
   const sendContactMessage = (e) => {
     e.preventDefault();
+    console.log(e);
     console.log(contactForm);
   };
   return (
