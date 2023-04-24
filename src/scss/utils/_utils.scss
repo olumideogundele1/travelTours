@@ -10,6 +10,16 @@
   position: relative;
 }
 
+.animation {
+  transform: translateY(-10rem);
+  opacity: 0;
+  transition: all 1s linear;
+}
+.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .btn-default {
   background: linear-gradient(to right, $main1, $main2);
   color: $white;

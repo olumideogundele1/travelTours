@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useHistory, useNavigate } from "react-router-dom";
 
 const Header = ({ heading, paragraph, children, img }) => {
   const [video] = useState({
@@ -7,9 +8,9 @@ const Header = ({ heading, paragraph, children, img }) => {
     img_tag: "/assests/video/screen.png",
     logo: "/assets/images/logo.png",
   });
-  const { push } = useHistory();
+  const { navigate } = useNavigate();
   const goToHome = () => {
-    push("/");
+    navigate("/");
   };
   return (
     <div className="header">
