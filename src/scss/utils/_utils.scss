@@ -137,3 +137,12 @@
   color: transparent;
   transform: rotate(-2deg);
 }
+.headingAnimation {
+  transform: translateY(-10rem) scale(0) rotate(-2deg);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+.headingAnimate {
+  transform: translateY(0) scale(1) rotate(-2deg);
+  opacity: 1;
+}

@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const AboutImage = () => {
   const [image] = useState("/assets/about/about.jpg");
   return (
-    <div className="page__image">
+    <div className="page__image animation">
       <LazyLoadImage src={image} alt="about image" />
     </div>
   );

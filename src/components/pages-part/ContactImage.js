@@ -8,13 +8,11 @@ const ContactImage = () => {
   });
   const sendContactMessage = (e) => {
     e.preventDefault();
-    console.log(e);
-    console.log(contactForm);
   };
   return (
     <form onSubmit={sendContactMessage}>
       <div className="group">
-        <h3 className="page__contact__heading">Contact Form</h3>
+        <h3 className="page__contact__heading headingAnimation">Contact Form</h3>
       </div>
       <div className="group">
         <input
