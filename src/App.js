@@ -13,6 +13,7 @@ import SharedProviders from "./context/providers/SharedProviders";
 import GalleryProvider from "./context/providers/GalleryProvider";
 import { HelmetProvider } from "react-helmet-async";
 import Contact from "./pages/Contact";
+import AnimationsProvider from "./context/providers/AnimationsProvider";
 function App() {
   return (
     <HelmetProvider>
@@ -22,15 +23,17 @@ function App() {
             <GalleryProvider>
               <DestinationsProvider>
                 <SharedProviders>
-                  <Toggle />
-                  <Nav />
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="details/:id" exact element={<Details />} />
-                    <Route path="*" element={<NotFound />} />
-                    <Route path="contact" element={<Contact />} />
-                  </Routes>
+                  <AnimationsProvider>
+                    <Toggle />
+                    <Nav />
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="about" element={<About />} />
+                      <Route path="details/:id" exact element={<Details />} />
+                      <Route path="*" element={<NotFound />} />
+                      <Route path="contact" element={<Contact />} />
+                    </Routes>
+                  </AnimationsProvider>
                 </SharedProviders>
               </DestinationsProvider>
             </GalleryProvider>
